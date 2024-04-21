@@ -1,0 +1,7 @@
+SERVER SIDE COMPONENTS CANNOT:
+- Listen to browser events
+- Access the DOM
+- Access the window object
+- Access Browser API's like local storage
+- Use Effect Hook
+- Maintain state
