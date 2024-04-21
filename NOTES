@@ -5,3 +5,15 @@ SERVER SIDE COMPONENTS CANNOT:
 - Access Browser API's like local storage
 - Use Effect Hook
 - Maintain state
+
+FETCHING ON CLIENT SIDE:
+- Fetching data on the client side is done using the Fetch API, React Query, UseEffect + useState
+- Resource intensive, No SEO, arge Bundles as everything happens on the client side
+- Extra rountrip to the server, first HTML is loaded, then JS is loaded, then data is fetched
+
+DATA CACHING ON SERVER SIDE:
+- Nextjs comes with a builtin Cache Provider which is based on file system.
+- It is used to fetch data on the client side and keep it in sync with the server cache.
+- Its stores the data in cache for each route by default, but we have full controll over it.
+- We can also use Redis, Memcached, etc for caching.
+- Caching functions like revalidate are provided only with fetch function, not with 3rd party libraries like axios.
