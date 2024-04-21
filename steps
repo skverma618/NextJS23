@@ -1,3 +1,6 @@
 npx create-next-app@latest
 cd project
 npm run dev
+
+To get prod like env - 
+npm run build and npm start

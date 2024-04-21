@@ -17,3 +17,13 @@ DATA CACHING ON SERVER SIDE:
 - Its stores the data in cache for each route by default, but we have full controll over it.
 - We can also use Redis, Memcached, etc for caching.
 - Caching functions like revalidate are provided only with fetch function, not with 3rd party libraries like axios.
+
+STATIC RENDERING & DYNAMIC RENDERING:
+- Static rendering: Render at build time. We can have our next js to build static pages once and when needed next time, next.js will not re-render them and it will get the payload or cache based on a file system.
+- Dynamic rendering: Render at request time. We can have our next js to render the page at request time. This is useful when we have dynamic data that changes frequently.
+- If you use fecth function, it will cache the data and will not re-fetch it until the revalidate time is reached. Thus, the page will actually be treated a stat8ic page.
+  If you want to make it dynamic, disable the caching
+
+  STAR POINT ----
+  - When you npm run build, there is a blank circle behind the routes that are static and a filled circle behind the routes that are dynamic.
+  To get prod like env- npm run build and npm start
